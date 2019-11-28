@@ -3057,7 +3057,7 @@
               <td>
               </td>
               <td>
-                The prototype of For In iterator objects (<emu-xref href="#sec-for-in-iterator-objects"></emu-xref>)
+                The prototype of For-In iterator objects (<emu-xref href="#sec-for-in-iterator-objects"></emu-xref>)
               </td>
             </tr>
             <tr>
@@ -17785,12 +17785,12 @@
       </emu-clause>
 
       <emu-clause id="sec-for-in-iterator-objects">
-        <h1>For In Iterator Objects</h1>
-        <p>A For In Iterator is an object that represents a specific iteration over some specific object. For In Iterator objects are never directly accessible to ECMAScript code; they exist soley to illustrate the behavior of EnumerateObjectProperties.</p>
+        <h1>For-In Iterator Objects</h1>
+        <p>A For-In Iterator is an object that represents a specific iteration over some specific object. For-In Iterator objects are never directly accessible to ECMAScript code; they exist soley to illustrate the behavior of EnumerateObjectProperties.</p>
 
         <emu-clause id="sec-createforiniterator" aoid="CreateForInIterator">
           <h1>CreateForInIterator ( _object_ )</h1>
-          <p>The abstract operation CreateForInIterator with argument _object_ is used to create a For In Iterator object which iterates over the own and inherited enumerable string properties of _object_ in a specific order. It performs the following steps:</p>
+          <p>The abstract operation CreateForInIterator with argument _object_ is used to create a For-In Iterator object which iterates over the own and inherited enumerable string properties of _object_ in a specific order. It performs the following steps:</p>
           <emu-alg>
             1. Assert: Type(_object_) is Object.
             1. Let _iterator_ be ObjectCreate(%ForInIteratorPrototype%, &laquo; [[Object]], [[ObjectWasVisited]], [[VisitedKeys]], [[RemainingKeys]] &raquo;).
@@ -17806,7 +17806,7 @@
           <h1>The %ForInIteratorPrototype% Object</h1>
           <p>The <dfn>%ForInIteratorPrototype%</dfn> object:</p>
           <ul>
-            <li>has properties that are inherited by all For In Iterator Objects.</li>
+            <li>has properties that are inherited by all For-In Iterator Objects.</li>
             <li>is an ordinary object.</li>
             <li>has a [[Prototype]] internal slot whose value is the intrinsic object %IteratorPrototype%.</li>
             <li>is never directly accessible to ECMAScript code.</li>
@@ -17818,7 +17818,7 @@
             <emu-alg>
               1. Let _O_ be the *this* value.
               1. Assert: Type(_O_) is Object.
-              1. Assert: _O_ has all of the internal slots of a For In Iterator Instance (<emu-xref href="#sec-properties-of-for-in-iterator-instances"></emu-xref>).
+              1. Assert: _O_ has all of the internal slots of a For-In Iterator Instance (<emu-xref href="#sec-properties-of-for-in-iterator-instances"></emu-xref>).
               1. Let _object_ be _O_.[[Object]].
               1. Let _visited_ be _O_.[[VisitedKeys]].
               1. Let _remaining_ be _O_.[[RemainingKeys]].
@@ -17845,9 +17845,9 @@
         </emu-clause>
 
         <emu-clause id="sec-properties-of-for-in-iterator-instances">
-          <h1>Properties of For In Iterator Instances</h1>
-          <p>For In Iterator instances are ordinary objects that inherit properties from the %ForInIteratorPrototype% intrinsic object. For In Iterator instances are initially created with the internal slots listed in <emu-xref href="#table-for-in-iterator-instance-slots"></emu-xref>.</p>
-              <emu-table id="table-for-in-iterator-instance-slots" caption="Internal Slots of For In Iterator Instances">
+          <h1>Properties of For-In Iterator Instances</h1>
+          <p>For-In Iterator instances are ordinary objects that inherit properties from the %ForInIteratorPrototype% intrinsic object. For-In Iterator instances are initially created with the internal slots listed in <emu-xref href="#table-for-in-iterator-instance-slots"></emu-xref>.</p>
+              <emu-table id="table-for-in-iterator-instance-slots" caption="Internal Slots of For-In Iterator Instances">
             <table>
               <tbody>
               <tr>
